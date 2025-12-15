@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <script src="./js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів | Kance</title>
+    <meta name="description" content="Каталог канцелярських товарів Kance - ручки, олівці, блокноти, папір, товари для творчості">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/1.png" alt="Kance" width="120" height="40">
+                </a>
+            </div>
+            <nav aria-label="Головна навігація">
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                    <li><a href="cart.html">Кошик</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Каталог товарів</h1>
+        
+        <!-- Фільтри -->
+        <aside>
+            <h2>Фільтри</h2>
+            <form>
+                <fieldset>
+                    <legend>Категорія</legend>
+                    <label>
+                        <input type="checkbox" name="category" value="pens"> Ручки та олівці
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="notebooks"> Блокноти та зошити
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="creativity"> Товари для творчості
+                    </label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Ціна</legend>
+                    <label>
+                        Мін: <input type="number" name="min-price" min="0" max="1000" value="0">
+                    </label>
+                    <label>
+                        Макс: <input type="number" name="max-price" min="0" max="1000" value="1000">
+                    </label>
+                </fieldset>
+                
+                <button type="submit">Застосувати фільтри</button>
+                <button type="reset">Скинути</button>
+            </form>
+        </aside>
+         <h2>Товари</h2>
+        <!-- Товари -->
+        <section class="products">
+            <article class="product">
+                <img src="images/7.jpg" alt="Гелева ручка Blue" width="250" height="250">
+                <h3>Гелева ручка Blue</h3>
+                <p>Комфортна ручка для довгого письма</p>
+                <p class="price">45 грн</p>
+                <button>Додати до кошика</button>
+            </article>
+            
+            <article class="product">
+                <img src="images/6.jpg" alt="Скетчбук A5" width="250" height="250">
+                <h3>Скетчбук A5</h3>
+                <p>Папір високої якості для малювання</p>
+                <p class="price">120 грн</p>
+                <button>Додати до кошика</button>
+            </article>
+            
+            <article class="product">
+                <img src="images/5.jpg" alt="Набір маркерів" width="250" height="250">
+                <h3>Набір маркерів 12 кольорів</h3>
+                <p>Яскраві кольори, не просочується</p>
+                <p class="price">210 грн</p>
+                <button>Додати до кошика</button>
+            </article>
+        </section>
+    </main>
+
+ <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kance</h3>
+                <p>Якісні канцелярські товари для навчання, роботи та творчості.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Швидкі посилання</h3>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Контакти</h3>
+                <address>
+                    <p>📍 м. Київ, вул. Кирилівська, 123</p>
+                    <p>📞 <a href="tel:+3804314141134">+38 (043) 141-41-13-4</a></p>
+                    <p>✉️ <a href="mailto:info@kance.ua">info@kance.ua</a></p>
+                </address>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© Kance 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Імпорт CSS-файлів у правильному порядку */
+@import 'base.css';           /* Базові стилі та змінні */
+@import 'layout.css';         /* Макет та Grid/Flexbox */
+@import 'components.css';     /* Компоненти (картки, кнопки) */
+@import 'forms.css';          /* Форми та валідація */
+@import 'responsive.css';     /* Адаптивність та медіазапити */
+@import 'crossbrowser.css';   /* Кросбраузерні фікси */
+
+
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+.hidden { display: none; }
+.visible { display: block; }
+
+/* Print styles */
+@media print {
+    .no-print { display: none; }
+    .print-only { display: block; }
+    body { font-size: 12pt; }
+    a[href]:after { content: " (" attr(href) ")"; }
+}
+
+/* Debug styles (тільки для розробки) */
+.debug * {
+    outline: 1px solid red;
+}

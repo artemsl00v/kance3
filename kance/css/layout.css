@@ -1,0 +1,344 @@
+.grid-system {
+    display: grid;
+    gap: var(--grid-gap, 30px);
+}
+
+/* Автоматичні колонки */
+.grid-auto {
+    grid-template-columns: repeat(auto-fill, minmax(var(--min-col, 250px), 1fr));
+}
+
+/* Фіксовані колонки */
+.grid-1 { grid-template-columns: 1fr; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Grid areas для складних макетів */
+.page-layout {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    grid-template-rows: auto 1fr auto auto;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .page-layout {
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+        grid-template-columns: 1fr 300px;
+    }
+}
+
+.header-area { grid-area: header; }
+.main-area { grid-area: main; }
+.sidebar-area { grid-area: sidebar; }
+.footer-area { grid-area: footer; }
+
+/* CSS Flexbox System */
+.flex-system {
+    display: flex;
+    gap: var(--flex-gap, 20px);
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* Flex alignment */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Flex items */
+.flex-item {
+    flex: 1;
+}
+
+.flex-item-2 {
+    flex: 2;
+}
+
+.flex-item-3 {
+    flex: 3;
+}
+
+/* Masonry grid (для каталогу) */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 10px;
+    gap: 20px;
+}
+
+.masonry-item {
+    grid-row-end: span var(--row-span, 20);
+}
+
+/* Sticky sidebar */
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+/* Картки з Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+/* Адаптивна сітка категорій */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Форма з Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-grid-full {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Header з Flexbox */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Footer з Grid */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+/* Hero section з Flexbox */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+}
+
+/* Responsive images з object-fit */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
+}
+
+/* Aspect ratio для зображень */
+.aspect-ratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+.aspect-ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+/* Complex layout для каталогу */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .catalog-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+section.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center; /* Центрує кожну картку */
+    gap: 30px;
+    margin-top: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Картка товару */
+
+
+section.products article.product {
+    background-color: var(--text-light);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    width: 280px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 420px;
+}
+
+
+
+/* Зображення товару */
+section.products article.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.products-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 40px auto 20px;
+    color: var(--text-dark);
+    max-width: 1200px;
+}
+
+/* Заголовок товару */
+section.products article.product h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* Опис товару */
+section.products article.product p:not(.price) {
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Ціна товару */
+section.products article.product .price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Кнопка товару */
+section.products article.product button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: auto;
+}
+
+section.products article.product button:hover {
+    background-color: #26734d;
+    transform: translateY(-2px);
+}
+
+/* Адаптивність для каталогу */
+@media (max-width: 768px) {
+    section.products {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    section.products article.product {
+        width: 100%;
+        max-width: 300px;
+        min-height: 400px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    section.products {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    
+    section.products article.product {
+        width: 260px;
+    }
+}
